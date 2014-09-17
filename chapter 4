@@ -1,0 +1,59 @@
+Quynh Nguyen
+jAva 112 Sac
+
+4.11 
+ Dividing two integers results in integer division, any fractional part of the calculation
+is lost . For example, 7 ÷ 4, which yields 1.75 in conventional arithmetic, truncates to 1 in integer arithmetic, rather than rounding to 2. To obtain a floating-point result from dividing integer values, a programmer must temporarily treat these values as floating-point numbers in the calculation by using the unary cast. As long as the (double) cast operator is applied to any variable in the calculation, the calculation will yield a double result which can be assigned to a
+double variable.
+4.12 	 Describe the two ways in which control statements can be combined.
+ Control statements can be “attached” to one another by connecting the exit point of one to the entry point of the next. Control statements also may be nested by placing one inside another.
+4.13   Counter-controlled repetition would be appropriate for calculating the sum of the
+first 100 positive integers because the number of repetitions is known in advance. The program that performs this task could use a while repetition statement with a counter variable that takes on the values 1 to 100. The program could then add the current counter value to the total variable in each repetition of the loop. Sentinel controlled repetition would be appropriate for calculating the sum of an arbitrary number of positive integers. The program that performs this task could use a sentinel value of –1 to mark the end of data entry. The program could use a while repetition statement that totals positive integers from the user until the user enters the sentinel value.
+4.14	 Pre incrementing a variable causes it to be incremented by 1, and then the new value
+of the variable is used in the expression in which it appears. Post incrementing a variable causes the current value of the variable to be used in the expression in which it appears, and then the variable’s value is incremented by 1. Pre incrementing and post incrementing a variable have the same effect when the incrementing operation appears in a statement by itself.
+4.15  Identify and correct the errors in each of the following pieces of code. [Note: There may be
+more than one error in each piece of code.]
+a) if ( age >= 65 );
+System.out.println( "Age is greater than or equal to 65" );
+else
+System.out.println( "Age is less than 65 )";
+Answer: The semicolon at the end of the if condition should be removed. The closing double
+quote of the second System.out.println should be inside the closing parenthesis.
+if ( age >= 65 )
+b) int x = 1, total;
+while ( x <= 10 )
+{
+total += x;
+++x;
+}
+The variable total should be initialized to zero.
+c) while ( x <= 100 )
+total += x;
+++x;
+The two statements should be enclosed in braces to properly group them into the
+body of the while; otherwise the loop will be an infinite loop.
+d) while ( y > 0 )
+{
+System.out.println( y );
+++y;
+Answer: The ++ operator should be changed to --; otherwise the loop will be an infinite loop
+if y starts with a value greater than 0. The closing brace for the while loop is missing.
+a) if ( age >= 65 )
+System.out.println( "Age is greater than or equal to 65" );
+else
+System.out.println( "Age is less than 65" );
+b) int x = 0, total;
+while ( x <= 10 )
+{
+total += x;
+++x;
+}
+c) while ( x <= 100 ) {
+total += x;
+++x;
+}
+d) while ( y > 0 )
+{
+System.out.println( y );
+--y;
+}
