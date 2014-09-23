@@ -1,0 +1,62 @@
+Hw 5.15  Quynh  Nguyen
+package hw5;
+
+ // homework 5.15 :Triangles.java{
+public class Triangles
+ {
+ // draw four triangles
+ public void drawTriangles()
+{
+ int row; // the row position
+ int column; // the column position
+ int space; // number of spaces to print
+ 
+ // first triangle
+ for ( row = 1; row <= 10; row++ )
+ {
+ for ( column = 1; column <= row; column++ )
+ System.out.print( "*" );
+
+ System.out.println();
+ } // end for loop
+
+ System.out.println();
+
+ // second triangle
+ for ( row = 10; row >= 1; row-- )
+ {
+ for ( column = 1; column <= row; column++ )
+ System.out.print( "*" );
+
+ System.out.println();
+ } // end for loop
+
+ System.out.println();
+
+ // third triangle
+ for ( row = 10; row >= 1; row-- )
+ {
+ for ( space = 10; space > row; space-- )
+ System.out.print( " " );
+
+ for ( column = 1; column <= row; column++ )
+ System.out.print( "*" );
+
+ System.out.println();
+ } // end for loop
+
+ System.out.println();
+
+ // fourth triangle
+for ( row = 10; row >= 1; row-- ) {
+
+ for ( space = 1; space < row; space++ )
+ System.out.print( " " );
+
+ for ( column = 10; column >= row; column-- )
+ System.out.print( "*" );
+
+ System.out.println();
+ } // end for loop
+ } // end method drawTriangles
+ } // end class Triangles
