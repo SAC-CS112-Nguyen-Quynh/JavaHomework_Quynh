@@ -1,0 +1,84 @@
+Quynh Nguyen
+ 
+	import java.util.Scanner;
+import java.util.Random;
+
+	public class Rockpaper {
+
+	public static void main(String[] args)
+	{
+		String Gameplayer; 
+		String Computerplayer = "";
+		String Decision;
+		int RandomNumInt;
+		int time =1;
+	     
+	        		Scanner input = new Scanner(System.in);
+		Random generator = new Random();
+		System.out.println("Hello everyone,\n Welcome to  Rock-Paper-Scissors game!\n" +
+		"Rock = R, Paper" + "= P, and Scissors = S\n" + "Let's play a game.");
+		System.out.println();
+
+		
+		RandomNumInt = generator.nextInt(3)+1;
+		if (RandomNumInt == 1)
+			Computerplayer = "R";
+		else if (RandomNumInt == 2)
+			Computerplayer = "P";
+		else if (RandomNumInt == 3)
+			Computerplayer = "S";
+
+
+		while(time >0){
+		
+		System.out.print("Gameplayer plays ; 'R' or 'P' or 'S': ");
+		Gameplayer = input.next();
+		Gameplayer =Gameplayer .toUpperCase();
+
+		
+		System.out.println("Computerplayer is: " + Computerplayer);
+
+		
+		if (Gameplayer.equals(Computerplayer))
+			System.out.println("No winner!\n");
+
+		if (Gameplayer.equals("R"))
+			if (Computerplayer.equals("S"))
+				System.out.println("Rock beats scissors. You are winner!!\n");
+		else if (Computerplayer.equals("P"))
+			System.out.println("Paper covers rock. You are loser!!\n");
+
+		if (Computerplayer.equals("S"))
+				System.out.println("Scissor beats paper. You are loser!!\n");
+		else if (Computerplayer.equals("R"))
+			System.out.println("Paper beats rock. You are winner!!\n");
+
+		if (Gameplayer.equals("S"))
+			if (Computerplayer.equals("P"))
+				System.out.println("Scissor beats paper. You are winner!!\n");
+		else if (Computerplayer.equals("R"))
+			System.out.println("Rock breaks scissors. You are loser!!\n");
+
+
+		
+		System.out.print("Do you want to continue a game? Press (y) to continue. Press (N) to stop: ");
+		Decision = input.next();
+		
+		if (Decision.equals("Y") || Decision.equals("y"))
+				{
+			System.out.print("Play a game again\n");
+				}
+		else
+							
+		
+		{
+			System.out.print("GAME OVER!\n GOOD BYE\n");
+			break;
+		}
+		
+        time++;
+
+}
+}}
+		
+
