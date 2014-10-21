@@ -1,0 +1,40 @@
+//Quynh Nguyen
+
+// A game that plays rock paper scissor using GUI 
+  import javax.swing.JOptionPane; 
+public class GameRockPaperScissor { 
+  public static void main(String[] args) { 
+   String humanInput = JOptionPane.showInputDialog( 
+    "Enter rock, paper, or scissor:");  
+    humanInput = humanInput.toLowerCase();  
+       int random = (int)(Math.random() * 3); 
+  String computerInput; // Computer's choice 
+   if (random == 0)   
+   computerInput = "rock";  
+  else if (random == 1)  
+   computerInput = "paper";  
+  else 
+    computerInput = "scissor";
+    
+  String message = "The computer is " + computerInput + ". You are " 
+    + humanInput;  
+    
+  // Determine who win  
+  boolean isTie = computerInput.equals(humanInput);  
+  boolean isWin =   
+   ((computerInput.equals("rock") && humanInput.equals("scissor")) ||  
+   (computerInput.equals("paper") && humanInput.equals("rock")) || 
+   (computerInput.equals("scissor") && humanInput.equals("paper")))
+       if (isWin)  
+   message += ". Computer Won.";  
+  else if (isTie) 
+   message += " too. It is Tie"; 
+ 
+  else  
+   message += ". You Won"; 
+    
+  // Display the result on the screen  
+  JOptionPane.showMessageDialog(null, message);  
+ } 
+ 
+} 
