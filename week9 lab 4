@@ -1,0 +1,101 @@
+//week9lab4 Quynh Nguyen
+
+import java.util.Scanner; 
+import java.util.Random;
+public class RandomNumber{
+
+public int randNum;
+
+public int RandomNumber()
+{
+ randNum = 1+ (int)(Math.random() *3);
+}
+
+public int GetRandom()
+{
+return randNum ;
+}
+}
+
+------------------------------------------------
+  
+ public class Rockpaper { 
+ 
+  	public static void main(String[] args) 
+ 	{ 
+ 		String Gameplayer;  
+ 		String Computerplayer = ""; 
+ 		String Decision; 
+ 		int RandomNumInt; 
+ 		int time =1; 
+ 	
+ 	        Scanner input = new Scanner(System.in); 
+ 	
+		System.out.println("Hello everyone,\n Welcome to  Rock-Paper-Scissors game!\n" + 
+		"Rock = R, Paper = P, and Scissors = S\n" + "Let's play a game."); 
+ 		System.out.println(); 
+
+		RandomNumber randNum2 = New RandomNumber();
+		RandomNumInt=randNum2.GetRandom();
+
+ 		if (RandomNumInt == 1) 
+ 			Computerplayer = "R"; 
+ 		else if (RandomNumInt == 2) 
+ 			Computerplayer = "P"; 
+ 		else if (RandomNumInt == 3) 
+ 			Computerplayer = "S"; 
+ 		System.out.print("User's play enter here: 'R' or 'P' or 'S' "); 
+ 		Gameplayer = input.next(); 
+ 		Gameplayer =Gameplayer.toUpperCase(); 
+
+		while(time >0){  
+ 		 		 
+ 		if (Gameplayer.equals(Computerplayer)) 
+ 			System.out.println("No winner!\n"); 
+ 
+ 
+ 		if (Gameplayer.equals("R")) 
+ 			if (Computerplayer.equals("S")) 
+ 				System.out.println("You are winner!!\n"); 
+ 		else if (Computerplayer.equals("P")) 
+ 			System.out.println("You are loser!!\n"); 
+ 
+ 
+ 		if (Gameplayer.equals("P")) 
+			if (Computerplayer.equals("S")) 
+ 				System.out.println("You are loser!!\n"); 
+ 		else if (Computerplayer.equals("R")) 
+ 			System.out.println("You are winner!!\n"); 
+ 
+ 
+ 		if (Gameplayer.equals("S")) 
+ 			if (Computerplayer.equals("P")) 
+ 				System.out.println("You are winner!!\n"); 
+ 		else if (Computerplayer.equals("R")) 
+ 			System.out.println("You are loser!!\n");  
+ 
+ 		 
+ 		System.out.print("Do you want to continue a game? Press (Y) to continue. Press (N) to stop: "); 
+ 		Decision = input.next(); 
+		System.out.println();
+ 		 
+ 		if (Decision.equals("Y") || Decision.equals("y")) 
+ 				{ 
+ 			System.out.print("User's play enter here: 'R' or 'P' or 'S' "); 
+ 			Gameplayer = input.next(); 
+ 			Gameplayer =Gameplayer.toUpperCase();  
+ 				} 
+
+ 		if (Decision.equals("N") || Decision.equals("n")) 
+ 							 
+ 		 
+ 		{ 
+ 			System.out.print("GAME OVER!\n GOOD BYE\n"); 
+ 			break; 
+ 		} 
+ 		 
+         time++; 
+ 
+ 
+ } 
+ }} 
